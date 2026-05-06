@@ -2,10 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0" />
-    <title>hm2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neko Garden</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <hah>hm2</hah>
+    <div id="game-container">
+      <div id="ui-layer">
+        <div class="stat-box">
+          <span class="fish-icon">🐟</span>
+          <span id="fish-count">0</span>
+        </div>
+        <button id="catbook-btn">📚 Catbook</button>
+      </div>
+
+      <!-- Modal -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div id="modal-body"></div>
+        </div>
+      </div>
+
+      <div id="garden">
+        <!-- Lure Slots -->
+        <div class="slot" data-id="1" style="left: 200px; top: 300px;"></div>
+        <div class="slot" data-id="2" style="left: 500px; top: 350px;"></div>
+        <div class="slot" data-id="3" style="left: 350px; top: 450px;"></div>
+        <div class="slot" data-id="4" style="left: 100px; top: 500px;"></div>
+        <div class="slot" data-id="5" style="left: 650px; top: 480px;"></div>
+      </div>
+
+      <div id="inventory">
+        <!-- Inventory items will be injected here by JS -->
+      </div>
+    </div>
+
+    <script type="module" src="game.js"></script>
   </body>
 </html>
